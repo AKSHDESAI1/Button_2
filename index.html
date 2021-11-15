@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Site</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <button id="add">add</button>
+    <br> <br>
+
+</body>
+<script>
+
+    let count = 0;
+    let add = document.getElementById('add');
+    let a = [1]
+
+
+    add.addEventListener('click', () => {
+        // console.log(a);
+
+        a.forEach(e => {
+            // console.log('arry', a)
+            a = []
+            let m1 = Math.floor(Math.random() * 70)
+            if (m1 >= 0 && m1 <= 10) {
+                m2 = 'orange';
+            }
+            else if (m1 > 10 && m1 <= 20) {
+                m2 = 'green';
+            }
+            else if (m1 > 20 && m1 <= 30) {
+                m2 = 'red';
+            }
+            else if (m1 > 30 && m1 <= 40) {
+                m2 = 'purple';
+            }
+            else if (m1 > 40 && m1 <= 50) {
+                m2 = 'skin';
+            }
+            else if (m1 > 50 && m1 <= 60) {
+                m2 = 'blue';
+            }
+            else if (m1 > 60 && m1 <= 70) {
+                m2 = 'cyan';
+            }
+            let a1 = document.createElement('button')
+            a1.innerHTML = e;
+            a1.setAttribute('style', `background-color: ${m2}`)
+            document.body.appendChild(a1);
+            count += 1
+            a.push(count + 1)
+
+            // console.log(a1)
+
+
+        });
+        // console.log('c1', a);
+    })
+    // console.log('c2', count)
+</script>
+
+</html>
